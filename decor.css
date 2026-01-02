@@ -1,0 +1,229 @@
+/* ===========================
+   Reset & body
+=========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   Container / Card
+=========================== */
+.container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   Headings
+=========================== */
+.container h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 8px rgba(0, 114, 255, 0.5);
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* ===========================
+   Button
+=========================== */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0072ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #005ecb;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Optional links
+=========================== */
+a {
+    text-decoration: none;
+    color: #0072ff;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+/* ===========================
+   Dashboard Header
+=========================== */
+.dashboard-header {
+    background: #0072ff;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+}
+
+.logout-btn {
+    background: #ff4b5c;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #e03b4f;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Dashboard Container
+=========================== */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+    background: #f0f4f8;
+    min-height: calc(100vh - 100px); /* keeps container full height minus header */
+}
+
+/* ===========================
+   Cards
+=========================== */
+.card {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0072ff;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-btn {
+    display: inline-block;
+    background: #0072ff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-btn:hover {
+    background: #005ecb;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 800px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
